@@ -11,7 +11,7 @@ terraform {
 # Provider Block
 provider "aws" {
   profile = "default" 
-  region  = "ap-south-1"
+  region  = "us-south-1"
 }
 
 resource "aws_instance" "ec2testserver_terraform" {
