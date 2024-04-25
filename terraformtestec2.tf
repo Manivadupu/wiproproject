@@ -2,7 +2,7 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
+      source  = "hashicorp/gcp"
       
     }
   }
@@ -11,13 +11,13 @@ terraform {
 # Provider Block
 provider "aws" {
   profile = "default" 
-  region  = "ap-south-1"
+  region  = "us-central"
 }
 
 resource "aws_instance" "ec2testserver_terraform" {
   
   ami                    = "ami-052cef05d01020f1d"
-  instance_type          = "t2.micro"
+  instance_type          = "m4.xlarge"
   key_name               = "linux2server"
   monitoring             = false
   vpc_security_group_ids = ["sg-08db8e1c598854c12"]
